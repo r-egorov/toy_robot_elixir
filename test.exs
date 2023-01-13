@@ -1,0 +1,29 @@
+alias ToyRobot.Robot
+
+%Robot{east: 0, north: 0, facing: :north}
+|> Robot.move
+|> IO.inspect
+|> Robot.turn_right
+|> IO.inspect
+|> Robot.move
+|> IO.inspect
+|> Robot.turn_left
+|> IO.inspect
+|> Robot.move
+|> IO.inspect
+|> Robot.move
+|> IO.inspect
+|> Robot.turn_left
+|> IO.inspect
+|> Robot.move
+|> IO.inspect
+|> Robot.turn_right
+|> IO.inspect
+|> Robot.turn_right
+|> IO.inspect
+|> Robot.move
+|> IO.inspect
+|> Robot.move
+|> IO.inspect
+|> Robot.move
+|> IO.inspect
