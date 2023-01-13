@@ -4,8 +4,8 @@ alias ToyRobot.Robot
 |> Robot.move
 |> Robot.turn_right
 |> Robot.move
+|> Robot.turn_left
 |> IO.inspect
-|> Robot.turn_left
 |> Robot.move
 |> Robot.move
 |> Robot.turn_left
@@ -15,3 +15,4 @@ alias ToyRobot.Robot
 |> Robot.move
 |> Robot.move
 |> Robot.move
+|> IO.inspect

@@ -51,13 +51,15 @@ defmodule ToyRobot.Robot do
         %Robot{facing: :west}
 
   """
-  def turn_left(%Robot{facing: facing}) do
-    case facing do
-      :north -> %Robot{facing: :west}
-      :west -> %Robot{facing: :south}
-      :south -> %Robot{facing: :east}
-      :east -> %Robot{facing: :north}
+  def turn_left(%Robot{facing: facing} = robot) do
+    new_facing = case facing do
+      :north -> :west
+      :west -> :south
+      :south -> :east
+      :east -> :north
     end
+
+    %Robot{robot | facing: new_facing}
   end
 
   @doc """
