@@ -45,5 +45,7 @@ defmodule ToyRobot.CommandRunner do
     run(rest, simulation)
   end
 
+  def run([{:invalid, _} | rest], simulation), do: run(rest, simulation)
+
   def run([], simulation), do: simulation
 end
