@@ -32,5 +32,18 @@ defmodule ToyRobot.CommandRunner do
     run(rest, simulation)
   end
 
+  def run([:report | rest], simulation) do
+    %{
+      east: east,
+      north: north,
+      facing: facing,
+    } = simulation |> Simulation.report
+
+    facing = facing |> Atom.to_string |> String.upcase
+    IO.puts "The robot is at (#{east}, #{north}) and is facing #{facing}"
+
+    run(rest, simulation)
+  end
+
   def run([], simulation), do: simulation
 end
